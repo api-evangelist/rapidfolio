@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/rapidfolio/connection-sdk-node
+docs: https://docs.rapidfolio.com/docs/concepts/environments
+summary: >-
+  Rapidfolio isolates a Sandbox and a Live environment, each with separate API
+  keys, connections, and triggers. Environment is encoded in the credential
+  prefix, so a sandbox credential can never act on live data.
+environments:
+  - name: sandbox
+    description: Isolated test environment with its own API keys, connections, and triggers.
+  - name: live
+    description: Production environment with its own API keys, connections, and triggers.
+credential_prefixes:
+  - value: run_sandbox_
+    environment: sandbox
+    used_by: Private Connection token (RAPID_TOKEN)
+    source: https://github.com/rapidfolio/connection-sdk-node
+  - value: run_live_
+    environment: live
+    used_by: Private Connection token (RAPID_TOKEN)
+    source: https://github.com/rapidfolio/connection-sdk-node
+testing:
+  - feature: Simulation mode
+    description: Run procedures in the editor with simulated inputs (no live tool calls).
+    source: https://docs.rapidfolio.com/docs/procedures/editor
+  - feature: Test Scenarios
+    description: >-
+      Named test cases with fixed inputs and expected outputs for regression
+      testing a procedure before publishing.
+    source: https://docs.rapidfolio.com/docs/procedures/scenarios
+notes: >-
+  Only the Private-Connection token prefixes (run_sandbox_ / run_live_) are
+  published verbatim in the public connection-sdk-node README. The Runner/
+  Dashboard API-key prefixes are documented but behind the auth-gated docs and
+  are NOT reproduced here (no fabrication).

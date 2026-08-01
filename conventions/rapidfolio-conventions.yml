@@ -1,0 +1,52 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.rapidfolio.com/llms.txt
+docs: https://docs.rapidfolio.com/docs/api
+summary: >-
+  Cross-cutting request/response semantics for the Rapidfolio Runner API and
+  Dashboard API, captured from the public documentation index. No public
+  OpenAPI is available, so per-field detail is limited to what the docs state.
+authentication:
+  style: api-key
+  detail: >-
+    API keys passed per environment (sandbox/live); see
+    authentication/rapidfolio-authentication.yml.
+idempotency:
+  supported: true
+  scope: Human Review API
+  mechanism: idempotency key
+  detail: >-
+    The Human Review API accepts idempotency keys so an approval or rejection
+    decision can be submitted safely without duplicating the action.
+  docs: https://docs.rapidfolio.com/docs/api/human-review-api
+execution_modes:
+  detail: >-
+    Runs can be started asynchronously (poll for status) or synchronously with
+    timeout handling. Manage Runs documents polling with exponential backoff.
+  docs: https://docs.rapidfolio.com/docs/api/run-procedure
+environments:
+  detail: >-
+    Sandbox and Live are fully isolated (separate API keys, connections,
+    triggers). See sandbox/rapidfolio-sandbox.yml.
+  docs: https://docs.rapidfolio.com/docs/concepts/environments
+webhooks:
+  supported: true
+  signing: HMAC-SHA256
+  detail: >-
+    Subscribe to run events; payloads are signed and verified with an
+    HMAC-SHA256 signature. See asyncapi/rapidfolio-webhooks.yml.
+  docs: https://docs.rapidfolio.com/docs/api/webhooks
+determinism:
+  detail: >-
+    Rapidfolio guarantees consistent, auditable, traceable execution with
+    deterministic outputs and a complete per-run step log.
+  docs: https://docs.rapidfolio.com/docs/concepts/determinism
+errors:
+  detail: >-
+    The Authentication reference documents API error codes; the specific
+    catalog is behind the auth-gated docs and is not reproduced here.
+  docs: https://docs.rapidfolio.com/docs/api/authentication
+cross_links:
+  authentication: authentication/rapidfolio-authentication.yml
+  sandbox: sandbox/rapidfolio-sandbox.yml
+  webhooks: asyncapi/rapidfolio-webhooks.yml

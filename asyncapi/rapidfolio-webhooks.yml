@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.rapidfolio.com/llms.txt
+spec_type: Webhooks
+docs: https://docs.rapidfolio.com/docs/api/webhooks
+summary: >-
+  Rapidfolio publishes outbound webhooks so consumers can subscribe to run
+  events instead of polling. Payloads carry an HMAC-SHA256 signature that
+  consumers verify against a shared secret. No AsyncAPI document is published;
+  this is the documented webhook surface captured from the public docs index.
+delivery:
+  transport: https
+  direction: outbound
+  signing: HMAC-SHA256
+  docs: https://docs.rapidfolio.com/docs/api/webhooks
+event_families:
+  - name: run events
+    description: >-
+      Lifecycle events for a procedure run (start / completion / status change);
+      payload structure documented in the Webhooks reference.
+    docs: https://docs.rapidfolio.com/docs/api/webhooks
+  - name: human review notifications
+    description: >-
+      Webhook notifications fired when a Human Review node pauses a run awaiting
+      an approval or rejection decision.
+    docs: https://docs.rapidfolio.com/docs/procedures/human-review
+notes: >-
+  Rapidfolio also consumes inbound events from third-party systems as triggers
+  (Slack, Linear, Jira, Stripe, GoCardless, Onfido, Alloy, Flagright, Xero,
+  Schedule) — those are ingestion triggers, not Rapidfolio's own event surface,
+  and are catalogued in the docs Triggers section.

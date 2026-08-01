@@ -1,7 +1,31 @@
 aid: rapidfolio
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rapidfolio.png
 name: Rapidfolio
-description: Rapidfolio is a company surfaced as a portfolio company of y-combinator and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Rapidfolio is an AI operations platform for financial-services companies that
+  automates back-office workflows — KYC/KYB and identity verification, lending
+  underwriting, payment-dispute and fraud investigation, reconciliation, and
+  OFAC/sanctions and regulatory reviews. Teams define procedures as visual
+  workflow graphs (Tool Call, Human Review, Wait, and Condition nodes) and
+  Rapidfolio's AI agent executes them with deterministic, auditable outputs and
+  a complete per-run step log. It ships isolated Sandbox and Live environments,
+  a Runner API and Dashboard API (API-key auth), HMAC-SHA256-signed webhooks,
+  human-review approvals with idempotency keys, a Node.js Connection SDK for
+  private connections to internal services, and 20+ built-in integrations
+  (Slack, Jira, Linear, Stripe, GoCardless, Onfido, Alloy, Flagright, Xero).
+  A Y Combinator (Summer 2026) company based in San Francisco.
 url: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +35,98 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Financial Services
+- Fintech
+- Workflow Automation
+- Artificial Intelligence
+- Agents
+- Compliance
+- KYC
+- Fraud
+- Back Office
+apis:
+- name: Rapidfolio API
+  description: >-
+    Runner API and Dashboard API for programmatically running procedures,
+    managing runs, submitting human-review decisions, managing API keys, and
+    subscribing to run events via webhooks.
+  humanURL: https://docs.rapidfolio.com/docs/api
+  tags:
+  - Workflow Automation
+  - Financial Services
+  properties:
+  - type: Authentication
+    url: authentication/rapidfolio-authentication.yml
+  - type: Webhooks
+    url: asyncapi/rapidfolio-webhooks.yml
+  - type: Conventions
+    url: conventions/rapidfolio-conventions.yml
+  - type: Idempotency
+    url: conventions/rapidfolio-conventions.yml
+  - type: Sandbox
+    url: sandbox/rapidfolio-sandbox.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: VulnerabilityDisclosure
+  url: security/rapidfolio-vulnerability-disclosure.yml
+- type: Security
+  url: security/rapidfolio-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/rapidfolio-domain-security.yml
+- type: Website
+  url: https://rapidfolio.com
+- type: DeveloperPortal
+  url: https://app.rapidfolio.com
+- type: Documentation
+  url: https://docs.rapidfolio.com
+- type: APIReference
+  url: https://docs.rapidfolio.com/docs/api
+- type: GettingStarted
+  url: https://docs.rapidfolio.com/docs/getting-started
+- type: SignUp
+  url: https://app.rapidfolio.com/signin
+- type: Support
+  url: https://rapidfolio.com/support
+- type: TermsOfService
+  url: https://rapidfolio.com/terms
+- type: PrivacyPolicy
+  url: https://rapidfolio.com/privacy
+- type: GitHubOrganization
+  url: https://github.com/rapidfolio
+- type: LLMsTxt
+  url: llms/rapidfolio-llms.txt
+- type: WellKnown
+  url: well-known/rapidfolio-well-known.yml
+- type: SecurityTxt
+  url: well-known/rapidfolio-security.txt
+- type: Packages
+  url: packages/rapidfolio-packages.yml
+- type: SDKs
+  url: packages/rapidfolio-packages.yml
+- type: Authentication
+  url: authentication/rapidfolio-authentication.yml
+- type: Conventions
+  url: conventions/rapidfolio-conventions.yml
+- type: Idempotency
+  url: conventions/rapidfolio-conventions.yml
+- type: Sandbox
+  url: sandbox/rapidfolio-sandbox.yml
+- type: Webhooks
+  url: asyncapi/rapidfolio-webhooks.yml
+- type: Conformance
+  url: conformance/rapidfolio-conformance.yml
+- type: Compliance
+  url: conformance/rapidfolio-conformance.yml
+
+x-enrichment:
+  date: 2026-07-20
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1

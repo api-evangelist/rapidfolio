@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.rapidfolio.com/llms.txt
+docs: https://docs.rapidfolio.com/docs/api/authentication
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  environments: [sandbox, live]
+schemes:
+  - name: apiKey
+    type: apiKey
+    in: header
+    description: >-
+      The Rapidfolio Runner API and Dashboard API authenticate with API keys.
+      Keys are scoped per environment (separate sandbox and live keys) and are
+      created, listed, and deleted via the Dashboard API. Documented in the
+      "Authentication" and "API Keys" sections of the API reference.
+    docs: https://docs.rapidfolio.com/docs/api/authentication
+  - name: connection-token
+    type: apiKey
+    in: token
+    description: >-
+      Private Connections (Node.js Connection SDK) authenticate with a per
+      environment long-lived token supplied via the RAPID_TOKEN environment
+      variable. Token format run_sandbox_… (Sandbox) or run_live_… (Live);
+      rotate with "Regenerate token" in the dashboard.
+    docs: https://docs.rapidfolio.com/docs/sdk/connection-sdk
+notes: >-
+  No public OpenAPI/Swagger specification is published (the developer docs are
+  gated behind WorkOS AuthKit), so this profile is searched from the public
+  llms.txt index and the public @rapidfolio/connection-sdk-node README rather
+  than derived from a spec. Rapidfolio's own API is API-key based; OAuth appears
+  only in third-party Connections (Slack, Stripe, Xero, etc.), not on the
+  Rapidfolio API itself.

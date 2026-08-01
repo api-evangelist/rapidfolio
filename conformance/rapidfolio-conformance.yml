@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: https://rapidfolio.com
+standards:
+  - id: soc2
+    conforms: true
+    evidence: >-
+      Rapidfolio's marketing site states SOC 2 compliance, immutable audit
+      trails, and role-based access control for its financial-operations
+      automation platform.
+    source: https://rapidfolio.com
+  - id: webhook-hmac-sha256
+    conforms: true
+    evidence: outbound webhooks signed with HMAC-SHA256 (docs API/webhooks)
+  - id: idempotency
+    conforms: true
+    evidence: Human Review API accepts idempotency keys
+compliance_program:
+  soc2: true
+  audit_trail: immutable
+  access_control: role-based (RBAC)
+notes: >-
+  Compliance posture is taken from Rapidfolio's public marketing claims; no
+  dedicated trust center or downloadable audit report was found publicly.

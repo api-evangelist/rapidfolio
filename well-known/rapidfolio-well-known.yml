@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of Rapidfolio hosts
+hosts:
+  - host: https://rapidfolio.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: rapidfolio-security.txt
+  - host: https://docs.rapidfolio.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 307
+        note: redirects to WorkOS AuthKit sign-in (docs are auth-gated)
+notes: >-
+  api.rapidfolio.com and runner.rapidfolio.com do not resolve publicly, so
+  /.well-known/openid-configuration and /.well-known/oauth-authorization-server
+  could not be probed. The Rapidfolio developer docs (docs.rapidfolio.com) are
+  gated behind WorkOS AuthKit; only /llms.txt, /.well-known/security.txt (on the
+  apex), robots.txt, and marketing pages are publicly reachable.

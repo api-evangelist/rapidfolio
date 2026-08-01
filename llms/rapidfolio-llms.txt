@@ -1,0 +1,60 @@
+# Rapidfolio Documentation
+
+> Rapidfolio is a procedure-based workflow automation platform for financial operations teams. Define visual workflow graphs, and Rapidfolio's AI agent executes them with full auditability and deterministic outputs.
+
+## Getting Started
+
+- [Getting Started](/docs/getting-started): Introduction, core concepts, and a 5-step quickstart.
+
+## Concepts
+
+- [Concepts Overview](/docs/concepts): Overview of Rapidfolio's core concepts.
+- [Procedures](/docs/concepts/procedures): Visual workflow graphs composed of nodes and edges, executed by the AI agent.
+- [Runs](/docs/concepts/runs): A single execution of a procedure — has inputs, outputs, and a complete step log.
+- [Environments](/docs/concepts/environments): Sandbox and Live isolation — separate API keys, connections, and triggers per environment.
+- [Determinism & Trust](/docs/concepts/determinism): How Rapidfolio guarantees consistent, auditable, and traceable execution.
+
+## Procedures
+
+- [Procedures Overview](/docs/procedures): Building, testing, and publishing procedures.
+- [Procedure Editor](/docs/procedures/editor): Node types (Tool Call, Human Review, Wait, Condition), canvas controls, input mappings, and simulation mode.
+- [Versions](/docs/procedures/versions): Draft and published versioning, rollbacks, and version pinning.
+- [Test Scenarios](/docs/procedures/scenarios): Named test cases with fixed inputs and expected outputs. Regression testing before publishing.
+- [Human Review](/docs/procedures/human-review): Human Review nodes, the review dashboard, the Review API, and webhook notifications.
+
+## Triggers
+
+- [Triggers Overview](/docs/triggers): How triggers work and all available trigger types.
+- [Schedule](/docs/triggers/schedule): Run procedures on a cron schedule with timezone support.
+- [Slack](/docs/triggers/slack): React to messages, mentions, and reactions in Slack channels.
+- [Linear](/docs/triggers/linear): Respond to issue, comment, and project events in Linear.
+- [Jira](/docs/triggers/jira): Respond to issue, comment, and sprint events in Jira.
+- [Stripe](/docs/triggers/stripe): React to payment, customer, charge, and subscription events in Stripe.
+- [GoCardless](/docs/triggers/gocardless): Respond to payment and mandate events in GoCardless.
+- [Onfido](/docs/triggers/onfido): Respond to identity verification check and workflow run events in Onfido.
+- [Alloy](/docs/triggers/alloy): React to evaluation and workflow decisioning events in Alloy.
+- [Flagright](/docs/triggers/flagright): Respond to AML alerts, cases, and transaction events in Flagright.
+- [Xero](/docs/triggers/xero): React to invoice, payment, and contact events in Xero.
+
+## Integrations
+
+- [Integrations Overview](/docs/integrations): All available integrations and how to use them.
+- [Connections](/docs/integrations/connections): Creating and managing authenticated connections (OAuth and API key integrations).
+- [Private Connection](/docs/integrations/private-connection): Connect on-premise or internal services without opening firewall ports.
+- [Custom API](/docs/integrations/custom-api): Connect any REST API using an OpenAPI/Swagger specification.
+
+## API Reference
+
+- [API Overview](/docs/api): Runner API and Dashboard API overview.
+- [Authentication](/docs/api/authentication): API key structure, environments (sandbox/live), and error codes.
+- [API Keys](/docs/api/api-keys): Create, list, and delete API keys via the Dashboard API.
+- [Run a Procedure](/docs/api/run-procedure): POST endpoint for starting runs, async and sync execution modes, timeout handling.
+- [Manage Runs](/docs/api/manage-runs): Get run status, cancel runs, polling with exponential backoff.
+- [Procedures API](/docs/api/procedures): List procedures and run them via the API.
+- [Human Review API](/docs/api/human-review-api): Submit approval or rejection decisions with idempotency keys.
+- [Webhooks](/docs/api/webhooks): Subscribe to run events, payload structure, and HMAC-SHA256 signature verification.
+
+## SDK
+
+- [SDK Overview](/docs/sdk): Available SDKs.
+- [Connection SDK (Node.js)](/docs/sdk/connection-sdk): Connect local services and internal APIs to Rapidfolio procedures. Includes installation, handler registration, Zod validation, context, token management, and local testing.

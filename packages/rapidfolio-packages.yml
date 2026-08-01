@@ -1,0 +1,17 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.npmjs.com/package/@rapidfolio/connection-sdk-node
+packages:
+  - language: javascript
+    registry: npm
+    name: "@rapidfolio/connection-sdk-node"
+    version: 0.2.0
+    license: Apache-2.0
+    url: https://www.npmjs.com/package/@rapidfolio/connection-sdk-node
+    repository: https://github.com/rapidfolio/connection-sdk-node
+    install: npm install @rapidfolio/connection-sdk-node
+    description: >-
+      Node.js/TypeScript SDK for exposing functions from internal systems to
+      Rapidfolio procedures via private connections (Zod-validated handlers,
+      token auth, graceful shutdown).
+    official: true
