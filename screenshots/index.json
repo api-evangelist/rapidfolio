@@ -1,0 +1,19 @@
+[
+  {
+    "repo": "rapidfolio",
+    "captured_at": "2026-08-17T081444",
+    "source_url": "https://app.rapidfolio.com",
+    "source_type": "DeveloperPortal",
+    "file": "rapidfolio-2026-08-17T081444.png",
+    "bytes": 330990
+  },
+  {
+    "repo": "rapidfolio",
+    "captured_at": "2026-08-17T124927",
+    "source_url": "https://rapidfolio.com",
+    "source_type": "root-domain",
+    "file": "rapidfolio-2026-08-17T124927.png",
+    "bytes": 313860,
+    "capture": "playwright-local"
+  }
+]
