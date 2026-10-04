@@ -51,14 +51,14 @@ created: '2026-07-17'
 modified: '2026-07-20'
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
-- Workflow-Automation
+- Workflow Automation
 - Artificial Intelligence
 - Agents
 - Compliance
 - KYC
-- Fraud
+- Fraud Prevention
 - Back Office
 tags_raw:
 - Company
@@ -71,6 +71,8 @@ tags_raw:
 - KYC
 - Fraud
 - Back Office
+- Financial-Services
+- Workflow-Automation
 apis:
 - name: Rapidfolio API
   description: >-
@@ -79,11 +81,13 @@ apis:
     subscribing to run events via webhooks.
   humanURL: https://docs.rapidfolio.com/docs/api
   tags:
-  - Workflow-Automation
-  - Financial-Services
+  - Workflow Automation
+  - Financial Services
   tags_raw:
   - Workflow Automation
   - Financial Services
+  - Workflow-Automation
+  - Financial-Services
   properties:
   - type: Authentication
     url: authentication/rapidfolio-authentication.yml
